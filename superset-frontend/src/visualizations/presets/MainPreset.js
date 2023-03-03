@@ -36,6 +36,7 @@ import TableChartPlugin from '@superset-ui/plugin-chart-table';
 import TreemapChartPlugin from '@superset-ui/legacy-plugin-chart-treemap';
 import { WordCloudChartPlugin } from '@superset-ui/plugin-chart-word-cloud';
 import WorldMapChartPlugin from '@superset-ui/legacy-plugin-chart-world-map';
+import { LiquidChartPlugin } from 'superset-plugin-chart-liquid';
 import {
   AreaChartPlugin,
   BarChartPlugin,
@@ -169,6 +170,7 @@ export default class MainPreset extends Preset {
         new EchartsSunburstChartPlugin().configure({ key: 'sunburst_v2' }),
         new HandlebarsChartPlugin().configure({ key: 'handlebars' }),
         ...experimentalplugins,
+        new LiquidChartPlugin().configure({ key: 'liquid' }),
       ],
     });
   }
